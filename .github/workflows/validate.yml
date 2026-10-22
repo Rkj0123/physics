@@ -1,0 +1,23 @@
+name: Validate Physics Agent Skill
+on:
+  push:
+  pull_request:
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate skill metadata, links, and physics tests
+        run: |
+          python scripts/validate_skill.py
+          python -m unittest discover -s tests -v
+      - name: Validate with official skills-ref CLI
+        run: |
+          python -m pip install 'git+https://github.com/agentskills/agentskills.git#subdirectory=skills-ref'
+          skills-ref validate .
+          skills-ref validate chapters/gravity-physics
+          skills-ref validate chapters/fluid-physics
