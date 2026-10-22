@@ -1,6 +1,6 @@
 ---
 name: gravity-physics
-description: Design, implement, and audit gravity-driven physical motion: falling UI cards, thrown elements, drag-and-release inertia, 2D rigid-body collisions, bouncing, stacking, constraints and rotational motion. Use when UI or game objects must accelerate, collide, settle or behave according to mechanics rather than easing curves.
+description: "Design, implement, and audit gravity-driven physical motion: falling UI cards, thrown elements, drag-and-release inertia, 2D rigid-body collisions, bouncing, stacking, constraints and rotational motion. Use when UI or game objects must accelerate, collide, settle or behave according to mechanics rather than easing curves."
 license: MIT
 metadata:
   version: "0.1.0"
