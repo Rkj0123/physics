@@ -59,7 +59,7 @@ The umbrella is a **chapter router**, not a claim that two chapters exhaust phys
 python3 scripts/validate_skill.py
 python3 -m unittest discover -s tests -v
 # Optional official reference CLI if installed:
-skills-ref validate .
+skills-ref validate "$(pwd)"
 skills-ref validate chapters/gravity-physics
 skills-ref validate chapters/fluid-physics
 ```
